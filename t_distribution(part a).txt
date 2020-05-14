@@ -1,0 +1,12 @@
+a = input('Enter the t_statistic: ');
+dof=input('Enter degree of freedom: ');
+
+p=t_table(a,dof);
+
+
+fprintf('For t_statistic %.4f with degree of freedom %d cumulative probability is %.4f',a,dof,p);
+
+
+function [p] = t_table(a,dof)
+p=1-tcdf(a,dof);
+end

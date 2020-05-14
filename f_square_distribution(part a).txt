@@ -1,0 +1,13 @@
+a = input('Enter the F_value: ');
+dof1=input('Enter degree of freedom for numarator: ');
+dof2=input('Enter degree of freedom for denominator: ');
+
+p=f_table(a,dof1,dof2);
+
+
+fprintf('For F_value %f with dof_1 %d and dof_2 %d cmulative probabilitye is %.2f',a,dof1,dof2,p);
+
+
+function [p] = f_table(a,dof1,dof2)
+p=1-fcdf(a,dof1,dof2);
+end

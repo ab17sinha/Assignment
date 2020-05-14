@@ -1,0 +1,12 @@
+a = input('Enter the chi_square value: : ');
+dof=input('Enter degree of freedom: ');
+
+p=chi_table(a,dof);
+
+
+fprintf('For chi_square value %f with degree of freedom %d cmulative probability is %f',a,dof,p);
+
+
+function [p] = chi_table(a,dof)
+p=1-chi2cdf(a,dof);
+end

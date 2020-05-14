@@ -1,0 +1,10 @@
+a = input('Enter Probability: ');
+
+z0=z_table_inv(a);
+fprintf('z0=%.2f',z0);
+newline;
+
+
+function [p] = z_table_inv(a)
+p=norminv(a);
+end

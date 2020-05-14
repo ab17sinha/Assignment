@@ -1,0 +1,9 @@
+z0 = input('Enter the z0 value: ');
+
+a=z_table(z0);
+fprintf('P(z<%.2f)=%.4f',z0,a);
+
+
+function [p] = z_table(z0)
+p=normcdf(z0);
+end
